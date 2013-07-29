@@ -29,6 +29,11 @@ class Post extends BasePost
     protected $id;
 
     /**
+     * @var string $image
+     */
+    protected $image;
+
+    /**
      * Get id
      *
      * @return integer $id
@@ -36,5 +41,15 @@ class Post extends BasePost
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Get image
+     * 
+     * @return string $image
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 }
