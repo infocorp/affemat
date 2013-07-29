@@ -1,0 +1,7 @@
+parameters:
+#    infocorp_affemat.example.class: Infocorp\Bundle\AffematBundle\Example
+
+services:
+#    infocorp_affemat.example:
+#        class: %infocorp_affemat.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
