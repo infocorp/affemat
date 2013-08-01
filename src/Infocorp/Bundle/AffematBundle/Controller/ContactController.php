@@ -11,13 +11,16 @@ class ContactController extends Controller
     {
         if ($request->isMethod('POST')) {
             $message = \Swift_Message::newInstance()
-                ->setSubject('Test')
-                ->setFrom('eduardomrb@gmail.com')
+                ->setSubject('Formulário de contato - Affemat')
+                ->setFrom($request->request->get('email'))
                 ->setTo('eduardomrb@gmail.com')
                 ->setBody(
                     $this->renderView(
                         'InfocorpAffematBundle:Email:email.txt.twig',
-                        ['message' => 'Email enviado com sucesso']
+                        [
+                            'message' => $request->request->get('message'),
+                            'name'    => $request->request->get('name'),
+                        ]
                     )
                 )
             ;

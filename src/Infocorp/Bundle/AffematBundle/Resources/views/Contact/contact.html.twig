@@ -1,5 +1,50 @@
 {% extends 'InfocorpAffematBundle::layout.html.twig' %}
 
 {% block content %}
-    <h1>Página de contato</h1>
+  {% if app.session.flashbag.has('success') %}
+    {% for message in app.session.flashbag.get('success') %}
+      <div class="alert-success">
+        {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  {% if app.session.flashbag.has('error') %}
+    {% for message in app.session.flashbag.get('error') %}
+      <div class="alert-error">
+        {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  <h1>Página de contato</h1>
+
+  <div class="row-fluid">
+    <div class="well">
+      <form action="{{ path('infocorp_affemat_fale_conosco') }}" method="POST" class="form-horizontal">
+        <div class="control-group">
+          <label class="control-label">Nome</label>
+          <div class="controls">
+            <input type="text" name="name" required>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">Email</label>
+          <div class="controls">
+            <input type="email" name="email" required>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">Deixe seu recado</label>
+          <div class="controls">
+            <textarea name="message" cols="50" rows="10"></textarea>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <input type="submit" value="Enviar!" class="btn btn-primary">
+        </div>
+      </form>
+    </div>
+  </div>
 {% endblock %}
