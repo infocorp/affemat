@@ -22,7 +22,14 @@ class ContactController extends Controller
                 )
             ;
 
-            $this->get('mailer')->send($message);
+            if ($this->get('mailer')->send($message)) {
+            	$this->get('session')->getFlashBag()->add('success', 'Mensagem enviada com sucesso');
+            } else {
+            	$this->get('session')->getFlashBag()->add(
+            		'error', 
+            		'Não foi possível enviar mensagem, tente novamente mais tarde'
+        		);
+            }
         }
 
         return $this->render('InfocorpAffematBundle:Default:index.html.twig', ['name' => 'Deu Certo']);
