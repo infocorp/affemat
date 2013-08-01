@@ -1,8 +1,15 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt_BR">
 <head>
-  <title>Affemat</title>
+  <title>{% block title %}Affemat{% endblock %}</title>
   {% block stylesheets %}
+    {% stylesheets 
+      'bundles/infocorpaffemat/css/bootstrap/bootstrap.min.css'
+      'bundles/infocorpaffemat/css/bootstrap/bootstrap-responsive.css'
+      filter='cssrewrite' 
+    %}
+      <link rel="stylesheet" href="{{ asset_url }}">
+    {% endstylesheets %}
   {% endblock %}
 </head>
 <body>
@@ -10,6 +17,12 @@
   {% endblock %}
 
   {% block javascripts %}
+    {% javascripts 
+      'bundles/infocorpaffemat/js/bootstrap.min.js'
+    %}
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
   {% endblock %}
 </body>
 </html>
