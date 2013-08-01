@@ -5,3 +5,7 @@ infocorp_affemat_homepage:
 infocorp_affemat_noticias:
     pattern: /noticias
     defaults: { _controller: InfocorpAffematBundle:Default:noticias }
+
+infocorp_affemat_fale_conosco:
+    pattern: /fale-conosco
+    defaults: { _controller: InfocorpAffematBundle:Contact:email }
