@@ -32,6 +32,6 @@ class ContactController extends Controller
             }
         }
 
-        return $this->render('InfocorpAffematBundle:Default:index.html.twig', ['name' => 'Deu Certo']);
+        return $this->render('InfocorpAffematBundle:Contact:contact.html.twig');
     }
 }

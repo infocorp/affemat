@@ -16,6 +16,7 @@ sonata_page:
     ignore_route_patterns:
         - (.*)admin(.*)     # ignore admin route, ie route containing 'admin'
         - ^_(.*)            # ignore symfony routes
+        - infocorp_affemat*
 
     ignore_routes:
         - sonata_page_esi_cache
@@ -37,7 +38,7 @@ sonata_page:
         classes:
             "Application\Sonata\PageBundle\Entity\Block": getId
 
-    default_template: default
+    default_template: affemat
     templates:
         default: { path: 'SonataPageBundle::layout.html.twig', name: 'default' }
         affemat: { path: 'InfocorpAffematBundle::layout.html.twig', name: 'affemat' }
