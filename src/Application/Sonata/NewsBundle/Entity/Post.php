@@ -52,4 +52,16 @@ class Post extends BasePost
     {
         return $this->image;
     }
+
+    /**
+     * Sets image
+     * 
+     * @return Post
+     */
+    public function setImage($image)
+    {
+    	$this->image = $image;
+
+    	return $this;
+    }
 }

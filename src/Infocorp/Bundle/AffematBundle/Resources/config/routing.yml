@@ -4,7 +4,11 @@ infocorp_affemat_homepage:
 
 infocorp_affemat_noticias:
     pattern: /noticias
-    defaults: { _controller: InfocorpAffematBundle:Default:noticias }
+    defaults: { _controller: InfocorpAffematBundle:News:index }
+
+infocorp_affemat_noticia:
+    pattern: /noticias/{slug}
+    defaults: { _controller: InfocorpAffematBundle:News:noticia }
 
 infocorp_affemat_fale_conosco:
     pattern: /fale-conosco

@@ -25,10 +25,11 @@ class ContactController extends Controller
                 )
             ;
 
+            $session = $this->get('session');
             if ($this->get('mailer')->send($message)) {
-            	$this->get('session')->getFlashBag()->add('success', 'Mensagem enviada com sucesso');
+            	$session->getFlashBag()->add('success', 'Mensagem enviada com sucesso');
             } else {
-            	$this->get('session')->getFlashBag()->add(
+            	$session->getFlashBag()->add(
             		'error', 
             		'Não foi possível enviar mensagem, tente novamente mais tarde'
         		);

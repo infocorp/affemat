@@ -1,0 +1,22 @@
+{% extends 'InfocorpAffematBundle::layout.html.twig' %}
+
+{% block content %}
+  <div class="span3">
+    MENU DE CATEGORIAS
+  </div>
+  <div class="span9">
+    {% for item in news %}
+      <div class="news-wrap">
+        <a href="{{ path('infocorp_affemat_noticia', { 'slug': item.slug }) }}">
+          {% media item.image, 'reference' %}
+        </a>
+        <div class="news-text">
+          <a href="{{ path('infocorp_affemat_noticia', { 'slug': item.slug }) }}">
+            <h2>{{ item.title }}</h2>
+          </a>
+          <p>{{ item.abstract }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
