@@ -11,7 +11,8 @@ infocorp_affemat_noticia:
     defaults: { _controller: InfocorpAffematBundle:News:noticia }
 
 infocorp_affemat_noticias_categoria:
-    pattern: /noticias/
+    pattern: /noticias/categoria/{slug}
+    defaults: { _controller: InfocorpAffematBundle:News:category }
 
 infocorp_affemat_fale_conosco:
     pattern: /fale-conosco

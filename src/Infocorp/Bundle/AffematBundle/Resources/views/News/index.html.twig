@@ -1,8 +1,27 @@
 {% extends 'InfocorpAffematBundle::layout.html.twig' %}
 
 {% block content %}
+  <ul class="breadcrumb">
+    <li><a href="{{ path('infocorp_affemat_homepage') }}">Home</a><span class="divider">/</span></li>
+    {% if subpage %}
+      <li><a href="{{ path('infocorp_affemat_noticias') }}">Notícias</a><span class="divider">/</span></li>
+      <li class="active">Categorias</li>
+    {% else %}
+      <li class="active">Notícias</li>
+    {% endif %}
+  </ul>
+
   <div class="span3">
-    MENU DE CATEGORIAS
+    <ul class="nav nav-list">
+      <li class="nav-header">Categorias</li>
+      {% for category in categories %}
+        <li>
+          <a href="{{ path('infocorp_affemat_noticias_categoria', { 'slug': category.slug }) }}">
+            {{ category.name }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
   </div>
   <div class="span9">
     {% for item in news %}
