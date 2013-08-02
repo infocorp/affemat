@@ -10,6 +10,9 @@ infocorp_affemat_noticia:
     pattern: /noticias/{slug}
     defaults: { _controller: InfocorpAffematBundle:News:noticia }
 
+infocorp_affemat_noticias_categoria:
+    pattern: /noticias/
+
 infocorp_affemat_fale_conosco:
     pattern: /fale-conosco
     defaults: { _controller: InfocorpAffematBundle:Contact:email }
