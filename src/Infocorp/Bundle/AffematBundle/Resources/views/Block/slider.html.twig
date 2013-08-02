@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="{{ asset('bundles/infocorpaffemat/js/nivo-gallery.css') }}">
+<div class="sonata-media-block-gallery-container">
+  <div id="sonata-media-block-gallery" class="nivoGallery">
+    <ul>
+      <li data-type="image" data-title="Teste" data-caption="Descrição do slide">
+        <img src="{{ asset('bundles/infocorpaffemat/images/logo_affemat.jpg') }}" alt="logo" width="820" height="615">
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="{{ asset('bundles/infocorpaffemat/js/jquery.nivo.gallery.min.js') }}"></script>
+
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+    jQuery('#sonata-media-block-gallery').nivoGallery({
+     pauseTime:     3000,
+     animSpeed:     300,
+     effect:        'fade',
+     startPaused:   false,
+     directionNav:  true,
+     progressBar:   true
+   });
+  });
+</script>
