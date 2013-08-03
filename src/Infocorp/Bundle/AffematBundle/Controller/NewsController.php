@@ -42,4 +42,10 @@ class NewsController extends Controller
     		'subpage' => true,
 		]);
     }
+
+    public function viewAction($slug)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+        $newsManager = $em->getRepository('ApplicationSonataNewsBundle:Post');
+    }
 }
