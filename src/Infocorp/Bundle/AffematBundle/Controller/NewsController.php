@@ -47,5 +47,15 @@ class NewsController extends Controller
     {
         $em = $this->getDoctrine()->getEntityManager();
         $newsManager = $em->getRepository('ApplicationSonataNewsBundle:Post');
+
+        $news = $newsManager->findOneBy(['slug' => $slug, 'enabled' => 1]);
+
+        if (!$news) {
+        	throw new NotFoundHttpException('Notícia não encontrada');
+        }
+
+        return $this->render('InfocorpAffematBundle:News:view.html.twig', [
+        	'news' => $news,
+    	]);
     }
 }
