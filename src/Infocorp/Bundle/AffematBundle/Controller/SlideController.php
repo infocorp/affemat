@@ -15,5 +15,8 @@ class SlideController extends Controller
 
         $slides = $newsManager->findLastSlides(5);
 
+        return $this->render('InfocorpAffematBundle:Block:slider.html.twig', [
+            'slides' => $slides,
+        ]);
     }
 }

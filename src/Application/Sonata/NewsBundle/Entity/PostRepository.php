@@ -28,7 +28,6 @@ class PostRepository extends BasePostRepository
 	{
 		$qb = $this->createQueryBuilder('p')
 			->where('p.enabled = true')
-			->andWhere('p.image_id <> NULL')
 			->setMaxResults($limit)
 		;
 
