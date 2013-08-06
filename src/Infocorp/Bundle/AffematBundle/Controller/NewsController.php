@@ -10,7 +10,7 @@ class NewsController extends Controller
 {
     public function indexAction()
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $newsManager = $em->getRepository('ApplicationSonataNewsBundle:Post');
         $categoriesManager = $em->getRepository('ApplicationSonataNewsBundle:Category');
 
@@ -23,7 +23,7 @@ class NewsController extends Controller
 
     public function categoryAction($slug)
     {
-    	$em = $this->getDoctrine()->getEntityManager();
+    	$em = $this->getDoctrine()->getManager();
     	$newsManager = $em->getRepository('ApplicationSonataNewsBundle:Post');
     	$categoryManager = $em->getRepository('ApplicationSonataNewsBundle:Category');
 
@@ -45,7 +45,7 @@ class NewsController extends Controller
 
     public function viewAction($slug)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $newsManager = $em->getRepository('ApplicationSonataNewsBundle:Post');
 
         $news = $newsManager->findOneBy(['slug' => $slug, 'enabled' => 1]);

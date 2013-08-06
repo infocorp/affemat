@@ -10,7 +10,7 @@ class SlideController extends Controller
 {
     public function indexAction()
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $newsManager = $em->getRepository('ApplicationSonataNewsBundle:Post');
 
         $slides = $newsManager->findLastSlides(5);

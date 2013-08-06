@@ -2,9 +2,12 @@
 <div class="sonata-media-block-gallery-container">
   <div id="sonata-media-block-gallery" class="nivoGallery">
     <ul>
-      <li data-type="image" data-title="Teste" data-caption="Descrição do slide">
-        <img src="{{ asset('bundles/infocorpaffemat/images/logo_affemat.jpg') }}" alt="logo" width="820" height="615">
-      </li>
+      <!-- <img src="{{ asset('bundles/infocorpaffemat/images/logo_affemat.jpg') }}" alt="logo" width="820" height="615"> -->
+      {% for slide in slides %}
+        <li data-type="image" data-title="{{ slide.title }}" data-caption="{{ slide.abstract }}">
+          {% media slide.image, 'reference' %}
+        </li>
+      {% endfor %}
     </ul>
   </div>
 </div>
