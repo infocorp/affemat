@@ -10,7 +10,7 @@ class NewsController extends Controller
 {
     public function indexAction()
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $newsManager = $em->getRepository('ApplicationSonataNewsBundle:Post');
         $categoriesManager = $em->getRepository('ApplicationSonataNewsBundle:Category');
 
@@ -23,7 +23,7 @@ class NewsController extends Controller
 
     public function categoryAction($slug)
     {
-    	$em = $this->getDoctrine()->getEntityManager();
+    	$em = $this->getDoctrine()->getManager();
     	$newsManager = $em->getRepository('ApplicationSonataNewsBundle:Post');
     	$categoryManager = $em->getRepository('ApplicationSonataNewsBundle:Category');
 
@@ -41,5 +41,21 @@ class NewsController extends Controller
     		'categories' => $categories,
     		'subpage' => true,
 		]);
+    }
+
+    public function viewAction($slug)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $newsManager = $em->getRepository('ApplicationSonataNewsBundle:Post');
+
+        $news = $newsManager->findOneBy(['slug' => $slug, 'enabled' => 1]);
+
+        if (!$news) {
+        	throw new NotFoundHttpException('Notícia não encontrada');
+        }
+
+        return $this->render('InfocorpAffematBundle:News:view.html.twig', [
+        	'news' => $news,
+    	]);
     }
 }

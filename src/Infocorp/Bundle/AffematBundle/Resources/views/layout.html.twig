@@ -23,9 +23,11 @@
   {% endblock %}
 </head>
 <body>
-
-
-  {% block content %}
-  {% endblock %}
+  {{ render(url('infocorp_affemat_slider')) }}
+  
+  <div class="row-fluid">
+    {% block content %}
+    {% endblock %}
+  </div>
 </body>
 </html>

@@ -24,5 +24,15 @@ use Sonata\NewsBundle\Entity\BasePostRepository;
  */
 class PostRepository extends BasePostRepository
 {
+	public function findLastSlides($limit)
+	{
+		$qb = $this->createQueryBuilder('p')
+			->where('p.enabled = true')
+			->setMaxResults($limit)
+		;
 
+		$query = $qb->getQuery();
+
+		return $query->getResult();
+	}
 }

@@ -8,7 +8,7 @@ infocorp_affemat_noticias:
 
 infocorp_affemat_noticia:
     pattern: /noticias/{slug}
-    defaults: { _controller: InfocorpAffematBundle:News:noticia }
+    defaults: { _controller: InfocorpAffematBundle:News:view }
 
 infocorp_affemat_noticias_categoria:
     pattern: /noticias/categoria/{slug}
@@ -17,3 +17,7 @@ infocorp_affemat_noticias_categoria:
 infocorp_affemat_fale_conosco:
     pattern: /fale-conosco
     defaults: { _controller: InfocorpAffematBundle:Contact:email }
+
+infocorp_affemat_slider:
+    path: /slide
+    defaults: { _controller: InfocorpAffematBundle:Slide:index }
