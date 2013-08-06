@@ -1,0 +1,73 @@
+{% extends 'InfocorpAffematBundle::layout.html.twig' %}
+{% block content %}
+
+{% block header %}
+  <header>
+    <div class="header_desc">
+      <h1> Associação dos Funcionários da Fazenda do Estado de Mato Grosso</h1>
+    </div>
+    <div class="logo">logo</div>
+    <div class="menu_sup">
+      <ul>
+        <li><a title="AFFEMAT | Início" href="#">Início</a></li>
+        <li><a title="AFFEMAT | Associe-se" href="#">Associe-se</a></li>
+        <li><a title="AFFEMAT | Saúde" href="#">Saúde</a></li>
+        <li><a title="AFFEMAT | Clubes" href="#">Clubes</a></li>
+        <li><a title="AFFEMAT | Convênios" href="#">Convênios</a></li>
+        <li><a title="AFFEMAT | Contato" href="#">Contato</a></li>
+      </ul>
+    </div>
+  </header>
+{% endblock %}
+
+{% block slider %}
+  <div id="home_slider">
+      {% include 'InfocorpAffematBundle:Block:slider.html.twig' %}
+  </div>
+{% endblock %}
+
+  <div id="noticias">
+    <div class="nav_noticias">
+      <div class="tabbable"> <!-- Only required for left/right tabs -->
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#tab1" data-toggle="tab">Notícias</a></li>
+          <li><a href="#tab2" data-toggle="tab">Aposentado e Pensionista</a></li>
+          <li><a href="#tab3" data-toggle="tab">Galerias</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="tab1">
+            <p>Aqui será exibido notícias</p>
+          </div>
+          <div class="tab-pane" id="tab2">
+            <p>Aqui será exibido notícias sobre aposentados e pensionistas</p>
+          </div>
+          <div class="tab-pane" id="tab3">
+            <p>Aqui será exibido as galerias com o efeito de carrosel</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="servicos">servicos
+    <ul>
+        <li class="servicos_titulo">Institucional</li>
+        <li><a title="AFFEMAT | Quem somos" href="#">Associe</a></li>
+        <li><a title="AFFEMAT | Valores" href="#">Saúde</a></li>
+        <li><a title="AFFEMAT | História" href="#">Clubes</a></li>
+        <li><a title="AFFEMAT | Estatuto Social" href="#">Convênios</a></li>
+        <li><a title="AFFEMAT | Regimento" href="#">Convênios</a></li>
+        <li><a title="AFFEMAT | Ação Social" href="#">Contato</a></li>
+        <li><a title="AFFEMAT | Prestação de Contas" href="#">Contato</a></li>
+    </ul>
+
+  </div>
+
+  <div id="parceiros">parceiros</div>
+
+  <div id="media_social">media_social</div>
+
+  <div id="rodape">rodape</div>
+
+
+{% endblock %}

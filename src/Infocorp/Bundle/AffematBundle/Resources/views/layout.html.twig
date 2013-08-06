@@ -4,6 +4,7 @@
   <title>{% block title %}Affemat{% endblock %}</title>
   {% block stylesheets %}
     {% stylesheets 
+      'bundles/infocorpaffemat/css/style.css'
       'bundles/infocorpaffemat/css/bootstrap/bootstrap.min.css'
       'bundles/infocorpaffemat/css/bootstrap/bootstrap-responsive.css'
       filter='cssrewrite' 
@@ -22,7 +23,7 @@
   {% endblock %}
 </head>
 <body>
-  {% include 'InfocorpAffematBundle:Block:slider.html.twig' %}
+
 
   {% block content %}
   {% endblock %}

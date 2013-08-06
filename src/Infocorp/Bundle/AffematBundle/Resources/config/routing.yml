@@ -1,6 +1,6 @@
 infocorp_affemat_homepage:
     pattern:  /
-    defaults: { _controller: InfocorpAffematBundle:Default:index }
+    defaults: { _controller: InfocorpAffematBundle:Home:index }
 
 infocorp_affemat_noticias:
     pattern: /noticias
