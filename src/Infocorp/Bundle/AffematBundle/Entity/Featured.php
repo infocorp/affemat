@@ -38,7 +38,8 @@ class Featured
     /**
      * @var string
      *
-     * @ORM\Column(name="image", type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="Application\Sonata\MediaBundle\Entity\Media")
+     * @ORM\JoinColumn(name="image_id", referencedColumnName="id")
      */
     private $image;
 
