@@ -3,10 +3,14 @@
 
 {% block header %}
   <header>
-    <div class="header_desc">
-      <h1> Associação dos Funcionários da Fazenda do Estado de Mato Grosso</h1>
+    <div class="header_top">
+      <div class="header_desc">
+        <h1> Associação dos Funcionários da Fazenda do Estado de Mato Grosso</h1>
+      </div>
+      <div class="logo">
+        <a href="#" title="AFFEMAT" alt="AFFEMAT"><img src="/bundles/infocorpaffemat/images/logo.png" title="AFFEMAT" alt="AFFEMAT"></a>
+      </div>
     </div>
-    <div class="logo">logo</div>
     <div class="menu_sup">
       <ul>
         <li><a title="AFFEMAT | Início" href="#">Início</a></li>
@@ -22,10 +26,46 @@
 
 {% block slider %}
   <div id="home_slider">
-      {% include 'InfocorpAffematBundle:Block:slider.html.twig' %}
+      <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="/bundles/infocorpaffemat/images/slide-01.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Example headline.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Leia mais</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/bundles/infocorpaffemat/images/slide-02.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Leia mais</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/bundles/infocorpaffemat/images/slide-03.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>One more for good measure.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Leia mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
   </div>
 {% endblock %}
 
+{% block noticias %}
   <div id="noticias">
     <div class="nav_noticias">
       <div class="tabbable"> <!-- Only required for left/right tabs -->
@@ -35,39 +75,253 @@
           <li><a href="#tab3" data-toggle="tab">Galerias</a></li>
         </ul>
         <div class="tab-content">
+          <a class="btn_mais_noticias" href="#">Mais notícias</a>
           <div class="tab-pane active" id="tab1">
-            <p>Aqui será exibido notícias</p>
+            <ul class="nav_tab_right">
+              <li>
+                <a href="#"><img src="/bundles/infocorpaffemat/images/noticia.jpg">
+                <strong>Existem muitas variações disponíveis de passagens de Lorem Ipsum, mas a maioria sof</strong>
+                </a>
+                <p>Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico.</p>
+              </li>
+            </ul>
+            <ul class="nav_tab_left">
+              <li><a title="AFFEMAT | Notícias" href="#">É um fato conhecido de todos que um leitor se...</a></li>
+              <li><a title="AFFEMAT | Notícias" href="#">É um fato conhecido de todos que um leitor se...</a></li>
+              <li><a title="AFFEMAT | Notícias" href="#">É um fato conhecido de todos que um leitor se...</a></li>
+              <li><a title="AFFEMAT | Notícias" href="#">É um conhecido de todos que um leitor se...</a></li>
+              <li><a title="AFFEMAT | Notícias" href="#">É um fato conhecido de todos que um leitor se...</a></li>
+              <li><a title="AFFEMAT | Notícias" href="#">É um fato conhecido de que um leitor se...</a></li>
+              <li><a title="AFFEMAT | Notícias" href="#">É um fato conhecido de todos que um leitor se...</a></li>
+            </ul>
           </div>
           <div class="tab-pane" id="tab2">
             <p>Aqui será exibido notícias sobre aposentados e pensionistas</p>
           </div>
           <div class="tab-pane" id="tab3">
-            <p>Aqui será exibido as galerias com o efeito de carrosel</p>
+            <div id="parceiros">
+    <div class="container">
+      <div id="myCarousel3" class="carousel slide">
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+        <div class="item active">
+        <div class="row text-center">
+          <!-- ITEM-->
+            <div class="span3">
+              <div class="thumbnail product-item">
+                <a href="#"><img src="/bundles/infocorpaffemat/images/parceiros.png"></a>
+              </div>
+            </div>
+          <!-- ITEM-->
+          
+          <!-- ITEM-->
+            <div class="span3">
+              <div class="thumbnail product-item">
+                <a href="#"><img src="/bundles/infocorpaffemat/images/parceiros.png"></a>
+              </div>
+            </div>
+          <!-- ITEM-->
+          
+          <!-- ITEM-->
+            <div class="span3">
+              <div class="thumbnail product-item">
+                <a href="#"><img src="/bundles/infocorpaffemat/images/parceiros.png"></a>
+              </div>
+            </div>
+          <!-- ITEM-->
+          
+          <!-- ITEM-->
+            <div class="span3">
+              <div class="thumbnail product-item">
+                <a href="#"><img src="/bundles/infocorpaffemat/images/parceiros.png"></a>
+              </div>
+            </div>
+          <!-- ITEM-->
+        </div>
+        </div>
+        
+        <div class="item">
+        <div class="row text-center">
+          <!-- ITEM-->
+            <div class="span3">
+              <div class="thumbnail product-item">
+                <a href="#"><img src="/bundles/infocorpaffemat/images/parceiros.png"></a>
+              </div>
+            </div>
+          <!-- ITEM-->
+          
+          <!-- ITEM-->
+            <div class="span3">
+              <div class="thumbnail product-item">
+                <a href="#"><img src="/bundles/infocorpaffemat/images/parceiros.png"></a>
+              </div>
+            </div>
+          <!-- ITEM-->
+          
+          <!-- ITEM-->
+            <div class="span3">
+              <div class="thumbnail product-item">
+                <a href="#"><img src="/bundles/infocorpaffemat/images/parceiros.png"></a>
+              </div>
+            </div>
+          <!-- ITEM-->
+          
+          <!-- ITEM-->
+            <div class="span3">
+              <div class="thumbnail product-item">
+                <a href="#"><img src="/bundles/infocorpaffemat/images/parceiros.png"></a>
+              </div>
+            </div>
+          <!-- ITEM-->
+        </div>
+        </div>
+      </div><!-- /INNER-->  
+            <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel3" data-slide="prev"><i class="icon-chevron-left"></i></a>
+        <a class="carousel-control right" href="#myCarousel3" data-slide="next"><i class="icon-chevron-right"></i></a>  
+      </div>
+    </div><!-- /SLIDER PARCEIROS -->
+
+  </div><!-- /PARCEIROS -->
           </div>
         </div>
       </div>
     </div>
   </div>
+{% endblock %}
 
-  <div id="servicos">servicos
-    <ul>
-        <li class="servicos_titulo">Institucional</li>
-        <li><a title="AFFEMAT | Quem somos" href="#">Associe</a></li>
-        <li><a title="AFFEMAT | Valores" href="#">Saúde</a></li>
-        <li><a title="AFFEMAT | História" href="#">Clubes</a></li>
-        <li><a title="AFFEMAT | Estatuto Social" href="#">Convênios</a></li>
-        <li><a title="AFFEMAT | Regimento" href="#">Convênios</a></li>
-        <li><a title="AFFEMAT | Ação Social" href="#">Contato</a></li>
-        <li><a title="AFFEMAT | Prestação de Contas" href="#">Contato</a></li>
+{% block servicos %}
+  <div id="servicos">
+    <ul class="nav_serv">
+      <li class="nav_serv_principal">
+        <ul class="nav_institucional">
+            <li class="servicos_inst"><strong>Institucional</strong></li>
+            <li><a title="AFFEMAT | Quem somos" href="#">Quem somos</a></li>
+            <li><a title="AFFEMAT | Valores" href="#">Valores</a></li>
+            <li><a title="AFFEMAT | História" href="#">História</a></li>
+            <li><a title="AFFEMAT | Estatuto Social" href="#">Estatuto Social</a></li>
+            <li><a title="AFFEMAT | Regimento" href="#">Regimento Interno</a></li>
+            <li><a title="AFFEMAT | Ação Social" href="#">Ação Social</a></li>
+            <li><a title="AFFEMAT | Prestação de Contas" href="#">Prestação</a></li>
+        </ul>
+
+        <ul class="nav_comunicacao">
+            <li class="servicos_com"><strong>Comunicação</strong></li>
+            <li><a title="AFFEMAT | Quem somos" href="#">Notícias</a></li>
+            <li><a title="AFFEMAT | Valores" href="#">Vídeos</a></li>
+            <li><a title="AFFEMAT | História" href="#">Galerias</a></li>
+            <li><a title="AFFEMAT | Estatuto Social" href="#">Eventos</a></li>
+            <li><a title="AFFEMAT | Regimento" href="#">Publicações</a></li>
+        </ul>
+
+        <ul class="nav_servicos">
+            <li class="servicos_serv"><strong>Serviços</strong></li>
+            <li><a title="AFFEMAT | Quem somos" href="#">Convênios</a></li>
+            <li><a title="AFFEMAT | Valores" href="#">Filiação</a></li>
+            <li><a title="AFFEMAT | História" href="#">Intranet</a></li>
+            <li><a title="AFFEMAT | Estatuto Social" href="#">Classificados</a></li>
+        </ul>
+      </li>
     </ul>
-
   </div>
+{% endblock %}
 
-  <div id="parceiros">parceiros</div>
+{% block parceiros %}
+  <div id="parceiros">
+    <div class="container">
+      <div id="myCarousel2" class="carousel slide">
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+        <div class="item active">
+        <div class="row text-center">
+          <!-- ITEM-->
+            <div class="span3">
+              <div class="thumbnail product-item">
+                <a href="#"><img src="/bundles/infocorpaffemat/images/parceiros.png"></a>
+              </div>
+            </div>
+          <!-- ITEM-->
+          
+          <!-- ITEM-->
+            <div class="span3">
+              <div class="thumbnail product-item">
+                <a href="#"><img src="/bundles/infocorpaffemat/images/parceiros.png"></a>
+              </div>
+            </div>
+          <!-- ITEM-->
+          
+          <!-- ITEM-->
+            <div class="span3">
+              <div class="thumbnail product-item">
+                <a href="#"><img src="/bundles/infocorpaffemat/images/parceiros.png"></a>
+              </div>
+            </div>
+          <!-- ITEM-->
+          
+          <!-- ITEM-->
+            <div class="span3">
+              <div class="thumbnail product-item">
+                <a href="#"><img src="/bundles/infocorpaffemat/images/parceiros.png"></a>
+              </div>
+            </div>
+          <!-- ITEM-->
+        </div>
+        </div>
+        
+        <div class="item">
+        <div class="row text-center">
+          <!-- ITEM-->
+            <div class="span3">
+              <div class="thumbnail product-item">
+                <a href="#"><img src="/bundles/infocorpaffemat/images/parceiros.png"></a>
+              </div>
+            </div>
+          <!-- ITEM-->
+          
+          <!-- ITEM-->
+            <div class="span3">
+              <div class="thumbnail product-item">
+                <a href="#"><img src="/bundles/infocorpaffemat/images/parceiros.png"></a>
+              </div>
+            </div>
+          <!-- ITEM-->
+          
+          <!-- ITEM-->
+            <div class="span3">
+              <div class="thumbnail product-item">
+                <a href="#"><img src="/bundles/infocorpaffemat/images/parceiros.png"></a>
+              </div>
+            </div>
+          <!-- ITEM-->
+          
+          <!-- ITEM-->
+            <div class="span3">
+              <div class="thumbnail product-item">
+                <a href="#"><img src="/bundles/infocorpaffemat/images/parceiros.png"></a>
+              </div>
+            </div>
+          <!-- ITEM-->
+        </div>
+        </div>
+      </div><!-- /INNER-->  
+            <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel2" data-slide="prev"><i class="icon-chevron-left"></i></a>
+        <a class="carousel-control right" href="#myCarousel2" data-slide="next"><i class="icon-chevron-right"></i></a>  
+      </div>
+    </div><!-- /SLIDER PARCEIROS -->
 
-  <div id="media_social">media_social</div>
+  </div><!-- /PARCEIROS -->
+{% endblock %}
 
+
+{% block media_social %}
+  <div id="media_social">
+    <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FAffemat%2F201137789921676&amp;width=900&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=true&amp;appId=289289821083335" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:900px; height:258px;" allowTransparency="true"></iframe>
+  </div>
+{% endblock %}
+
+{% block rodape %}
   <div id="rodape">rodape</div>
-
+{% endblock %}
 
 {% endblock %}

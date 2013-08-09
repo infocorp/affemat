@@ -19,12 +19,26 @@
     %}
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
       <script src="{{ asset_url }}"></script>
+      <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarouselParceiros').carousel()
+        })
+      }(window.jQuery)
+    </script>
     {% endjavascripts %}
   {% endblock %}
 </head>
-<body>
-  {{ render(url('infocorp_affemat_slider')) }}
-  
+<body>  
   <div class="row-fluid">
     {% block content %}
     {% endblock %}
