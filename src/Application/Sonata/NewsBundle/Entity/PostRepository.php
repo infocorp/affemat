@@ -26,9 +26,11 @@ class PostRepository extends BasePostRepository
 {
 	public function findLastSlides($limit)
 	{
-		$qb = $this->createQueryBuilder('p')
-			->where('p.enabled = true')
-			->setMaxResults($limit)
+		$qb = $this->createQueryBuilder('p');
+			
+		$qb->where('p.enabled = true')
+		    ->andWhere($qb->expr()->isNotNull('p.image'))
+		    ->setMaxResults($limit)
 		;
 
 		$query = $qb->getQuery();
