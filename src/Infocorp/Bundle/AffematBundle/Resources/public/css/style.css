@@ -1,0 +1,340 @@
+body {
+	background: #f2f2f2 !important;
+	margin: 0;
+	padding: 0;
+}
+
+img a{border:0;}
+a img{border:0;}
+
+header{
+	width: 100%;
+	height: 160px;
+	background: url('/bundles/infocorpaffemat/images/bg_topo.png') repeat-x;
+	background-position: center;
+	border-bottom: 5px solid #d6790f;
+}
+
+header .header_top{
+	width: 805px;
+	height: auto;
+	margin: 0 auto;
+}
+
+header .header_desc{
+	width: 600px;
+	height: 50px;
+	font-family: "Aleo";
+	text-shadow: #000 1px 1px 1px;
+	color: #fff;
+	font-weight: normal;
+	font-style: normal;
+	margin: 0 auto;
+	padding-top: 1px;	
+}
+
+header .header_desc h1{
+	padding-top: 15px;
+}
+
+header .logo{
+	width: 205px;
+	height: 90px;
+	float: left;
+	margin: -20px -105px;
+	float: left;
+}
+
+header .menu_sup{
+	text-align: center;
+}
+
+header .menu_sup ul{
+	width: 527px;
+	height: 50px;
+	margin: 75px auto;
+	list-style: none;
+	text-align: center;
+}
+
+header .menu_sup li{
+	float: left;
+	padding: 0px 10px 0px 10px;
+	font-family: "Aleo";
+	font-size: 20px;
+	font-weight: bold;
+	text-shadow: #000 1px 1px 1px;
+}
+
+header .menu_sup a{
+	text-decoration: none;
+	color: #FFF;
+}
+
+header .menu_sup a:hover{
+	text-decoration: underline;
+	color: #FFF;
+}
+
+#home_slider{
+	width: 900px;
+	margin: 0 auto;
+}
+
+#home_slider .carousel-caption {
+	height: 75px;
+}
+
+#home_slider .carousel-caption h1 {
+	font-size: 25px;
+	color: #f2f2f2;
+	margin-top: -15px;
+	margin-bottom: -5px;
+}
+
+#home_slider .lead {
+	font-size: 15px;
+}
+
+#home_slider .btn-large {
+	float: right;
+	padding: 2px 5px;
+	font-size: 12px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+#noticias{
+	width: 100%;
+	margin: 40px auto;
+	padding-top: 0px;
+	background: #d0dff2;
+}
+
+#noticias .nav_noticias{
+	width: 900px;
+	max-height: 175px;
+	margin: 0 auto;
+}
+
+#noticias .nav_noticias img{
+	border: 5px solid #f2f2f2;
+	float: left;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+
+#noticias .nav_noticias .nav_tab_right{
+	float: left;
+	position: relative;
+	top: 0px;
+	right: 95px;
+	list-style: none;
+}
+
+#noticias .nav_noticias .nav_tab_left{
+	float: left;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+#noticias .nav_noticias .nav_tab_left a{
+	background: #d0dff2;
+}
+
+#noticias .nav_noticias strong{
+	width: 190px;
+	height: 80px;
+	float: left;
+	line-height: 15px;
+	position: relative;
+	text-align: justify;
+}
+
+#noticias .nav_noticias p{
+	width: 320px;
+	height: 80px;
+	line-height: 13px;
+	padding-left: 5px;
+	font-size: 12px;
+	text-align: justify;
+}
+
+#noticias .tab-content .btn_mais_noticias{
+	float: left;
+	position: relative;
+	top: 125px;
+	left: 20px;
+	background: #d0dff2
+}
+
+/*#noticias .active{
+	background: #d0dff2;
+}*/
+
+#noticias .active a{
+	background: #d0dff2;
+}
+
+#noticias .tabbable{
+	/*background: #d0dff2;*/
+	position: relative;
+	top: -38px;
+}
+
+/*#noticias .nav-tabs{
+	background: #d0dff2;
+}*/
+
+#servicos{
+	width: 900px;
+	height: 190px;
+	margin: 10px auto;
+}
+
+
+#servicos .nav_serv_principal{
+	list-style: none;
+	float: left;
+	position: relative;
+	top: -20px;
+	left: 25%;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#servicos ul{
+	float: left;
+	margin-right: 30px;
+}
+
+#servicos li{
+	list-style: circle;
+	list-style-position: inside;
+}
+
+#servicos ul .servicos_inst{
+	list-style: none;
+	padding: 5px 30px 5px 30px;
+	margin-bottom: 10px;
+	background-color: #1a4087;
+	color: #FFF;
+}
+
+#servicos .servicos_inst strong{
+	color: #FFF;
+}
+
+#servicos .nav_institucional a{
+	color: #1a4087;
+}
+
+#servicos .nav_institucional li{
+	color: #1a4087;
+}
+
+#servicos ul .servicos_com{
+	list-style: none;
+	padding: 5px 30px 5px 30px;
+	margin-bottom: 10px;
+	background-color: #cc6d01;
+	color: #FFF;
+}
+
+#servicos .servicos_com strong{
+	color: #FFF;
+}
+
+#servicos .nav_comunicacao a{
+	color: #cc6d01;
+}
+
+#servicos .nav_comunicacao li{
+	color: #cc6d01;
+}
+
+#servicos ul .servicos_serv{
+	list-style: none;
+	padding: 5px 30px 5px 30px;
+	margin-bottom: 10px;
+	background-color: #929d01;
+	color: #FFF;
+}
+
+#servicos .servicos_serv strong{
+	color: #FFF;
+}
+
+#servicos .nav_servicos a{
+	color: #929d01;
+}
+
+#servicos .nav_servicos li{
+	color: #929d01;
+}
+
+#parceiros{
+	width: 900px;
+	height: 75px;
+	margin: 0 auto;
+}
+
+#parceiros .carousel{
+	margin-right: 10px;
+}
+
+#parceiros .carousel-caption {
+	height: 75px;
+}
+
+#parceiros .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+	width: 900px;
+}
+
+#parceiros .row {
+	margin-left: 10px;
+}
+
+#parceiros .carousel-control.left {
+	top: 46%;
+	left: -36px;
+}
+
+#parceiros .carousel-control.right {
+	right: -45px;
+	top: 25px;
+}
+
+#parceiros [class^="icon-"], [class*=" icon-"] {
+	margin-top: 10px;
+}
+
+@media (max-width: 767px){
+.carousel .row .span3 {
+	display: block;
+	float: left;
+	width: 25%;
+	margin-left: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+}
+
+#media_social{
+	width: 900px;
+	height: 260px;
+	margin: 0 auto;
+}
+
+#rodape{
+	width: 100%;
+	height: 100px;
+	background: url('/bundles/infocorpaffemat/images/bg_rodape.png') repeat-x;
+	border-top: 5px solid #d6790f;
+}
