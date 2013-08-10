@@ -5,18 +5,26 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Infocorp\Bundle\AffematBundle\Entity\SlideInterface;
+use Infocorp\Bundle\AffematBundle\Entity\FeaturedRepository;
 
 class SlideController extends Controller
 {
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $newsManager = $em->getRepository('ApplicationSonataNewsBundle:Post');
+        $slideManager = $em->getRepository('InfocorpAffematBundle:Featured');
 
-        $slides = $newsManager->findLastSlides(5);
+        return $this->renderSlide(
+            'InfocorpAffematBundle:Block:slider.html.twig',
+            $slideManager,
+            5
+        );
+    }
 
-        return $this->render('InfocorpAffematBundle:Block:slider.html.twig', [
-            'slides' => $slides,
-        ]);
+    private function renderSlide($template, SlideInterface $slideManager, $limit, array $options = array())
+    {
+        $options['slides'] = $slideManager->findLastSlides($limit);
+        return $this->render($template, $options);
     }
 }

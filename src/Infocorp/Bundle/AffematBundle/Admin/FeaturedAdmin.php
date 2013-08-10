@@ -12,6 +12,7 @@ class FeaturedAdmin extends Admin
     public function configureFormFields(FormMapper $formMapper)
     {
         return $formMapper
+            ->add('title', null, array('label' => 'Título'))
             ->add('description', null, array('label' => 'Descrição'))
             ->add('link')
             ->add('image', 'sonata_type_model_list', array('label' => 'Imagem'))
@@ -22,7 +23,7 @@ class FeaturedAdmin extends Admin
     public function configureListFields(ListMapper $listMapper)
     {
         return $listMapper
-            ->addIdentifier('description', null, array('label' => 'Descrição'))
+            ->addIdentifier('title', null, array('label' => 'Título'))
             ->add('enabled', null, array('label' => 'Ativo'))
             ->add('link')
         ;
@@ -39,6 +40,7 @@ class FeaturedAdmin extends Admin
     public function configureShowFields(ShowMapper $showMapper)
     {
         return $showMapper
+            ->add('title', null, array('label' => 'Título'))
             ->add('description', null, array('label' => 'Descrição'))
             ->add('link')
             ->add('image', null, array('label' => 'Imagem'))
