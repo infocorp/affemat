@@ -24,7 +24,7 @@ class FeaturedAdmin extends Admin
     {
         return $listMapper
             ->addIdentifier('title', null, array('label' => 'Título'))
-            ->add('enabled', null, array('label' => 'Ativo'))
+            ->add('enabled', null, array('label' => 'Ativo', 'editable' => true))
             ->add('link')
         ;
     }
