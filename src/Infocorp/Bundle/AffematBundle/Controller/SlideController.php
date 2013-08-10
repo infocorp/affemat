@@ -17,12 +17,11 @@ class SlideController extends Controller
 
         return $this->renderSlide(
             'InfocorpAffematBundle:Block:slider.html.twig',
-            $slideManager,
-            5
+            $slideManager
         );
     }
 
-    private function renderSlide($template, SlideInterface $slideManager, $limit, array $options = array())
+    private function renderSlide($template, SlideInterface $slideManager, $limit = null, array $options = array())
     {
         $options['slides'] = $slideManager->findLastSlides($limit);
         return $this->render($template, $options);

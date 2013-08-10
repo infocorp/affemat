@@ -15,14 +15,16 @@ class FeaturedRepository extends EntityRepository implements SlideInterface
     /**
      * {@inheritdoc}
      */
-    public function findLastSlides($limit)
+    public function findLastSlides($limit = null)
     {
         $qb = $this->createQueryBuilder('p');
             
         $qb->where('p.enabled = true')
             ->andWhere($qb->expr()->isNotNull('p.image'))
-            ->setMaxResults($limit)
         ;
+        if ($limit) {
+            $qb->setMaxResults($limit);
+        }
 
         $query = $qb->getQuery();
 

@@ -15,7 +15,7 @@ class FeaturedAdmin extends Admin
             ->add('title', null, array('label' => 'Título'))
             ->add('description', null, array('label' => 'Descrição'))
             ->add('link')
-            ->add('image', 'sonata_type_model_list', array('label' => 'Imagem'))
+            ->add('image', 'sonata_type_model_list', array('label' => 'Imagem (1500x550)'))
             ->add('enabled', null, array('label' => 'Ativo'))
         ;
     }
