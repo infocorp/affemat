@@ -1,27 +1,20 @@
-<link rel="stylesheet" href="{{ asset('bundles/infocorpaffemat/js/nivo-gallery.css') }}">
-<div class="sonata-media-block-gallery-container">
-  <div id="sonata-media-block-gallery" class="nivoGallery">
-    <ul>
-      {% for  slide in slides %}
-        <li data-type="image" data-title="{{ slide.title }}" data-caption="{{ slide.abstract }}">
-          {% media slide.image, 'reference' %}
-        </li>
-      {% endfor %}
-    </ul>
+<div id="home_slider">
+      <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        {% for  slide in slides %}
+          <div class="item active">
+            {% media slide.image, 'reference' %}
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>{{ slide.title }}</h1>
+                <p class="lead">{{ slide.description }}</p>
+                <a class="btn btn-large btn-primary" href="{{ slide.link }}">Leia mais</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
   </div>
-</div>
-
-<script src="{{ asset('bundles/infocorpaffemat/js/jquery.nivo.gallery.min.js') }}"></script>
-
-<script type="text/javascript">
-  jQuery(document).ready(function() {
-    jQuery('#sonata-media-block-gallery').nivoGallery({
-     pauseTime:     3000,
-     animSpeed:     300,
-     effect:        'fade',
-     startPaused:   false,
-     directionNav:  true,
-     progressBar:   true
-   });
-  });
-</script>
