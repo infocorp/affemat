@@ -1,0 +1,9 @@
+{% extends 'InfocorpAffematBundle::layout.html.twig' %}
+
+{% block content %}
+  <ul>
+      {% for gallery in galleries %}
+          <li><a href="{{ url('infocorp_affemat_galeria_view', {'id' : gallery|sonata_urlsafeid }) }}">{{ gallery.name }}</a></li>
+      {% endfor %}
+  </ul>
+{% endblock %}

@@ -21,3 +21,11 @@ infocorp_affemat_fale_conosco:
 infocorp_affemat_slider:
     path: /slide
     defaults: { _controller: InfocorpAffematBundle:Slide:index }
+
+infocorp_affemat_galeria:
+    pattern: /galerias
+    defaults: { _controller: InfocorpAffematBundle:Gallery:index }
+
+infocorp_affemat_galeria_view:
+    pattern: /galerias/{id}
+    defaults: { _controller: InfocorpAffematBundle:Gallery:view }
