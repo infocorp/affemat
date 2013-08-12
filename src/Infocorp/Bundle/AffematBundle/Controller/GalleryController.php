@@ -34,7 +34,7 @@ class GalleryController extends Controller
             throw new NotFoundHttpException('Não foi possível encontrar a galeria');
         }
 
-        return $this->render('SonataMediaBundle:Gallery:view.html.twig', array(
+        return $this->render('InfocorpAffematBundle:Gallery:view.html.twig', array(
             'gallery'   => $gallery,
         ));
     }
