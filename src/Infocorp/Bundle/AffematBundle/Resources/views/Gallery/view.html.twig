@@ -1,16 +1,40 @@
 {% extends 'InfocorpAffematBundle::layout.html.twig' %}
 
+{% block stylesheets %}
+  {{ parent() }}
+  {% stylesheets 'bundles/sonatamedia/nivo-gallery/nivo-gallery.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}">
+  {% endstylesheets %}
+{% endblock %}
+
 {% block content %}
-    <h1>{{ gallery.name }}</h1>
+  {% if gallery.name %}
+    <h3 class="sonata-media-block-media-title">{{ gallery.name }}</h3>
+  {% endif %}
 
-    <div class="sonata-media-gallery-media-list">
+  <div class="sonata-media-block-gallery-container">
+    <div id="sonata-media-block-gallery" class="nivoGallery">
+      <ul>
         {% for galleryHasMedia in gallery.GalleryHasMedias %}
-            <div class="sonata-media-gallery-media-item">
-                <a class="sonata-media-gallery-media-item-link" href="{{ url('sonata_media_view', {'id': galleryHasMedia.media|sonata_urlsafeid }) }}">
-                    {% thumbnail galleryHasMedia.media, gallery.defaultFormat %}
-                </a>
-            </div>
+          <li data-type="{{ galleryHasMedia.media.contentType }}" data-title="{{ galleryHasMedia.media.name }}">
+            {% media galleryHasMedia.media, 'big' %}
+          </li>
         {% endfor %}
+      </ul>
     </div>
-
+  </div>
+  
+  <script src="{{ asset('bundles/sonatamedia/nivo-gallery/jquery.nivo.gallery.min.js') }}"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function() {
+      jQuery('#sonata-media-block-gallery').nivoGallery({
+        pauseTime:     5000,
+        animSpeed:     300,
+        effect:        'fade',
+        startPaused:   false,
+        directionNav:  true,
+        progressBar:   true
+      });
+    });
+  </script>
 {% endblock %}
