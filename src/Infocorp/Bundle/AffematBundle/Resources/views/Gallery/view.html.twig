@@ -2,7 +2,7 @@
 
 {% block stylesheets %}
   {{ parent() }}
-  {% stylesheets 'bundles/sonatamedia/nivo-gallery/nivo-gallery.css' %}
+  {% stylesheets 'bundles/sonatamedia/nivo-gallery/nivo-gallery.css' filter='cssrewrite' %}
     <link rel="stylesheet" href="{{ asset_url }}">
   {% endstylesheets %}
 {% endblock %}
