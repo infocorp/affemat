@@ -15,7 +15,7 @@ class NewsController extends Controller
         $categoriesManager = $em->getRepository('ApplicationSonataNewsBundle:Category');
 
         return $this->render('InfocorpAffematBundle:News:index.html.twig', [
-            'news' => $newsManager->findBy(['enabled' => 1]),
+            'news' => $newsManager->findNews(),
             'categories' => $categoriesManager->findBy(['enabled' => 1]),
             'subpage' => false,
         ]);
@@ -34,7 +34,7 @@ class NewsController extends Controller
     		throw new NotFoundHttpException('Categoria não encontrada');
     	}
 
-    	$news = $newsManager->findBy(['category' => $category, 'enabled' => 1]);
+    	$news = $newsManager->findNewsByCategory($category);
 
     	return $this->render('InfocorpAffematBundle:News:index.html.twig', [
     		'news' => $news,
