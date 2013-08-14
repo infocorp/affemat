@@ -5,5 +5,5 @@ services:
     sonata.admin.featured:
         class: Infocorp\Bundle\AffematBundle\Admin\FeaturedAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: Home, label: Destaques }
+            - { name: sonata.admin, manager_type: orm, group: Site, label: Destaques }
         arguments: [null, Infocorp\Bundle\AffematBundle\Entity\Featured, 'SonataAdminBundle:CRUD']
