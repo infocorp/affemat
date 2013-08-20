@@ -28,7 +28,8 @@ web1:
     - tokenizer
     - xml
     - pdo_mysql
-    - zip 
+    - zip
+    - curl
   php_session_autostart: Off
   php_short_open_tag: Off
   magic_quotes_gpc: Off
@@ -40,7 +41,7 @@ web1:
   after_build:
     - "cp app/config/parameters.yml.pagoda app/config/parameters.yml"
     - "curl -s http://getcomposer.org/installer | php"
-    - "php composer.phar update --prefer-source"
+    - "php composer.phar update --prefer-source --no-dev"
   before_deploy:
     - "app/console cache:clear --env=prod"
     - "app/console doctrine:ensure-production-settings"
