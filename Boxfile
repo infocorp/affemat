@@ -4,7 +4,7 @@ web1:
   ################################################
   shared_writable_dirs:
       - app/cache
-      - app/logs
+      - app/logs 
  
   ################################################
   ## WEB SPECIFIC SETTINGS
