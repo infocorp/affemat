@@ -43,6 +43,7 @@ web1:
     - "cp app/config/parameters.yml.pagoda app/config/parameters.yml"
     - "curl -s http://getcomposer.org/installer | php"
     - "php composer.phar update --prefer-source --no-dev"
+    - "php app/console --env=prod --no-debug assetic:dump -n"
   before_deploy:
     - "app/console cache:clear --env=prod"
     - "app/console doctrine:ensure-production-settings"
