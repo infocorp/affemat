@@ -30,6 +30,7 @@ web1:
     - pdo_mysql
     - zip
     - curl
+    - gd
   php_session_autostart: Off
   php_short_open_tag: Off
   magic_quotes_gpc: Off
