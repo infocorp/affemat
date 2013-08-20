@@ -16,11 +16,10 @@ class ContactController extends Controller
                 ->setTo('eduardomrb@gmail.com')
                 ->setBody(
                     $this->renderView(
-                        'InfocorpAffematBundle:Email:email.txt.twig',
-                        [
+                        'InfocorpAffematBundle:Email:email.txt.twig', array(
                             'message' => $request->request->get('message'),
                             'name'    => $request->request->get('name'),
-                        ]
+                        )
                     )
                 )
             ;
