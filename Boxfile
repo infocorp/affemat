@@ -33,6 +33,7 @@ web1:
   php_session_autostart: Off
   php_short_open_tag: Off
   magic_quotes_gpc: Off
+  php_date_timezone: "America/Cuiaba"
 
 ################################################
   ## DEPLOYMENT HOOKS
