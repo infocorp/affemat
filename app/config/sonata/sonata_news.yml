@@ -1,6 +1,10 @@
 # 
 # more information can be found here http://sonata-project.org/bundles/news
 #
+parameters:
+    # Override sonata.news.admin.post admin class
+    sonata.news.admin.post.class: Application\Sonata\NewsBundle\Admin\PostAdmin
+
 sonata_news:
     title:        %sonata_news.blog_title%
     link:         %sonata_news.blog_link%
