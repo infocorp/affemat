@@ -38,6 +38,7 @@ web1:
   ################################################
   # this config works with app/cache in shared writables
   after_build:
+    - "cp app/config/parameters.yml.pagoda app/config/parameters.yml"
     - "curl -s http://getcomposer.org/installer | php"
     - "php composer.phar install --prefer-source"
   before_deploy:
