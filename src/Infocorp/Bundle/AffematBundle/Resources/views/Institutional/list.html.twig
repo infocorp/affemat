@@ -1,0 +1,6 @@
+<ul class="nav_institucional">
+  <li class="servicos_inst"><strong>Institucional</strong></li>
+  {% for institutional in institutionals %}
+    <li><a href="{{ path('infocorp_affemat_institutional_view', {slug: institutional.slug}) }}">{{ institutional.title }}</a></li>
+  {% endfor %}
+</ul>

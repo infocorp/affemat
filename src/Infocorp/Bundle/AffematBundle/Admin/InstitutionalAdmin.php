@@ -15,13 +15,14 @@ class InstitutionalAdmin extends Admin
     {
         return $formMapper
             ->add('title', null, array('label' => 'Título'))
-            ->add('enabled', null, array('label' => 'Habilitado'))
-            ->add('contentFormatter', 'sonata_formatter_type_selector', array(
-                'source' => 'rawContent',
-                'target' => 'content',
+            ->add('enabled', null, array(
+                'label' => 'Habilitado',
+                'attr' => array(
+                    'checked' => true,
+                ),
             ))
             ->add('content', 'sonata_formatter_type', array(
-                'event_dispatcher' => $formMapper->getEventDispatcher(),
+                'event_dispatcher' => $formMapper->getFormBuilder()->getEventDispatcher(),
                 'format_field' => 'contentFormatter',
                 'source_field' => 'rawContent',
                 'source_field_options' => array(
@@ -29,6 +30,7 @@ class InstitutionalAdmin extends Admin
                 ),
                 'target_field' => 'content',
                 'listener' => true,
+                'label' => 'Conteúdo',
             ))
         ;
     }

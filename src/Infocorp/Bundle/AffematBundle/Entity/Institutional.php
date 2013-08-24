@@ -3,6 +3,7 @@
 namespace Infocorp\Bundle\AffematBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Sonata\NewsBundle\Model\Tag;
 
 /**
  * Institutional
@@ -27,6 +28,13 @@ class Institutional
      * @ORM\Column(name="title", type="string", length=255)
      */
     private $title;
+
+    /**
+     * @var string
+     * 
+     * @ORM\Column(name="slug", type="string", length=255)
+     */
+    private $slug;
 
     /**
      * @var boolean
@@ -76,6 +84,7 @@ class Institutional
     public function setTitle($title)
     {
         $this->title = $title;
+        $this->setSlug(Tag::slugify($title));
     
         return $this;
     }
@@ -88,6 +97,28 @@ class Institutional
     public function getTitle()
     {
         return $this->title;
+    }
+
+    /**
+     * Sets slug
+     * 
+     * @return Institutional
+     */
+    public function setSlug($slug)
+    {
+    	$this->slug = $slug;
+
+    	return $this;
+    }
+
+    /**
+     * Gets slug
+     * 
+     * @return string
+     */
+    public function getSlug()
+    {
+    	return $this->slug;
     }
 
     /**
@@ -134,5 +165,49 @@ class Institutional
     public function getContent()
     {
         return $this->content;
+    }
+
+    /**
+     * Sets Raw Content
+     * 
+     * @return Institutional
+     */
+    public function setRawContent($rawContent)
+    {
+    	$this->rawContent = $rawContent;
+
+    	return $this;
+    }
+
+    /**
+     * Gets Raw Content
+     * 
+     * @return string
+     */
+    public function getRawContent()
+    {
+    	return $this->rawContent;
+    }
+
+    /**
+     * Sets the Content Formatter
+     * 
+     * @return Institutional
+     */
+    public function setContentFormatter($contentFormatter)
+    {
+    	$this->contentFormatter = $contentFormatter;
+
+    	return $this;
+    }
+
+    /**
+     * Gets the Content Formatter
+     * 
+     * @return string
+     */
+    public function getContentFormatter()
+    {
+    	return $this->contentFormatter;
     }
 }
