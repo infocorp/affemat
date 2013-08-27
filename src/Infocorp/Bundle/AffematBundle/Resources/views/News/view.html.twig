@@ -1,5 +1,13 @@
 {% extends 'InfocorpAffematBundle::layout.html.twig' %}
 {% block content %}
-    {{ news.title }}
-    {{ news.content | raw }}
+
+	<article>
+	    <h1 class="title-new">
+	    	{{ news.title }}
+	    </h1>
+
+	    <div class="content-new">
+	    	{{ news.content | raw }}
+		</div>	    
+    </article>
 {% endblock %}
