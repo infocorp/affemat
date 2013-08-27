@@ -1,3 +1,5 @@
+/*###################### RESET ######################*/
+
 body {
 	background: #f2f2f2 !important;
 	margin: 0;
@@ -6,6 +8,8 @@ body {
 
 img a{border:0;}
 a img{border:0;}
+
+/*###################### HEADER ######################*/
 
 header{
 	width: 100%;
@@ -76,6 +80,8 @@ header .menu_sup a:hover{
 	color: #FFF;
 }
 
+/*###################### SLIDER ######################*/
+
 #home_slider{
 	width: 900px;
 	margin: 0 auto;
@@ -104,6 +110,8 @@ header .menu_sup a:hover{
 	-moz-border-radius: 0px;
 	border-radius: 0px;
 }
+
+/*###################### HOME NEWS ######################*/
 
 #noticias{
 	width: 100%;
@@ -173,23 +181,16 @@ header .menu_sup a:hover{
 	background: #d0dff2
 }
 
-/*#noticias .active{
-	background: #d0dff2;
-}*/
-
 #noticias .active a{
 	background: #d0dff2;
 }
 
 #noticias .tabbable{
-	/*background: #d0dff2;*/
 	position: relative;
 	top: -38px;
 }
 
-/*#noticias .nav-tabs{
-	background: #d0dff2;
-}*/
+/*###################### HOME BLOCO SERVIÇOS ######################*/
 
 #servicos{
 	width: 900px;
@@ -278,6 +279,8 @@ header .menu_sup a:hover{
 	color: #929d01;
 }
 
+/*###################### HOME BLOCO PARCEIROS ######################*/
+
 #parceiros{
 	width: 900px;
 	height: 75px;
@@ -326,12 +329,15 @@ header .menu_sup a:hover{
 }
 }
 
+/*###################### MEDIA SOCIAL ######################*/
+
 #media_social{
 	width: 900px;
 	height: 260px;
 	margin: 0 auto;
 }
 
+/*######################  PAGE NEWS ######################*/
 .title-new{
 	color: #333;
 	margin: auto 10% auto 10%;
@@ -342,6 +348,8 @@ header .menu_sup a:hover{
 	margin: auto 10% auto 10%;
 	text-align: justify;
 }
+
+/*###################### FOOTER ######################*/
 
 #rodape{
 	width: 100%;
