@@ -64,4 +64,17 @@ class PostRepository extends BasePostRepository
 
 		return $query->getResult();
 	}
+
+	public function findLastNews($limit = 8)
+	{
+		$query = $this->getEntityManager()->createQuery('
+			SELECT p
+			FROM Application\Sonata\NewsBundle\Entity\Post p
+			WHERE p.publicationDateStart <= CURRENT_TIMESTAMP()
+			AND p.enabled = 1
+			ORDER BY p.createdAt DESC
+		')->setMaxResults($limit);
+
+		return $query->getResult();
+	}
 }

@@ -15,23 +15,7 @@
         <div class="tab-content">
           <a class="btn_mais_noticias" href="#">Mais notícias</a>
           <div class="tab-pane active" id="tab1">
-            <ul class="nav_tab_right">
-              <li>
-                <a href="#"><img src="/bundles/infocorpaffemat/images/noticia.jpg">
-                <strong>Existem muitas variações disponíveis de passagens de Lorem Ipsum, mas a maioria sof</strong>
-                </a>
-                <p>Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico.</p>
-              </li>
-            </ul>
-            <ul class="nav_tab_left">
-              <li><a title="AFFEMAT | Notícias" href="#">É um fato conhecido de todos que um leitor se...</a></li>
-              <li><a title="AFFEMAT | Notícias" href="#">É um fato conhecido de todos que um leitor se...</a></li>
-              <li><a title="AFFEMAT | Notícias" href="#">É um fato conhecido de todos que um leitor se...</a></li>
-              <li><a title="AFFEMAT | Notícias" href="#">É um conhecido de todos que um leitor se...</a></li>
-              <li><a title="AFFEMAT | Notícias" href="#">É um fato conhecido de todos que um leitor se...</a></li>
-              <li><a title="AFFEMAT | Notícias" href="#">É um fato conhecido de que um leitor se...</a></li>
-              <li><a title="AFFEMAT | Notícias" href="#">É um fato conhecido de todos que um leitor se...</a></li>
-            </ul>
+            {{ render(url('infocorp_affemat_noticias_list_home')) }}
           </div>
           <div class="tab-pane" id="tab2">
             <p>Aqui será exibido notícias sobre aposentados e pensionistas</p>

@@ -10,6 +10,10 @@ infocorp_affemat_noticia:
     pattern: /noticias/{slug}
     defaults: { _controller: InfocorpAffematBundle:News:view }
 
+infocorp_affemat_noticias_list_home:
+    path: /noticias-list-home
+    defaults: { _controller: InfocorpAffematBundle:News:homeList }
+
 infocorp_affemat_noticias_categoria:
     pattern: /noticias/categoria/{slug}
     defaults: { _controller: InfocorpAffematBundle:News:category }
