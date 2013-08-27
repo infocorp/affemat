@@ -22,6 +22,14 @@ infocorp_affemat_slider:
     path: /slide
     defaults: { _controller: InfocorpAffematBundle:Slide:index }
 
+infocorp_affemat_institutional_list:
+    path: /institucional-list
+    defaults: { _controller: InfocorpAffematBundle:Institutional:list }
+
+infocorp_affemat_institutional_view:
+    pattern: /institucional/{slug}
+    defaults: { _controller: InfocorpAffematBundle:Institutional:view }
+
 infocorp_affemat_galeria:
     pattern: /galerias
     defaults: { _controller: InfocorpAffematBundle:Gallery:index }
