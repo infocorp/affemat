@@ -35,6 +35,12 @@ class ContactController extends Controller
             }
         }
 
-        return $this->render('InfocorpAffematBundle:Contact:contact.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $groupManager = $em->getRepository('InfocorpAffematBundle:ContactGroup');
+        $groups = $groupManager->findBy(array('enabled' => 1));
+
+        return $this->render('InfocorpAffematBundle:Contact:contact.html.twig', array(
+            'groups' => $groups,
+        ));
     }
 }
