@@ -16,7 +16,7 @@
 <ul class="nav_tab_left">
   {% for item in news %}
     {% if not loop.first %}
-      <li><a href="{{ path('infocorp_affemat_noticia', {slug: item.slug}) }}">{{ item.title }}</a></li>
+      <li><a href="{{ path('infocorp_affemat_noticia', {slug: item.slug}) }}">{{ item.title|slice(0, 60) }}</a></li>
     {% endif %}
   {% endfor %}
 </ul>

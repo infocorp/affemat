@@ -13,7 +13,7 @@
           <li><a href="#tab3" data-toggle="tab">Galerias</a></li>
         </ul>
         <div class="tab-content">
-          <a class="btn_mais_noticias" href="#">Mais notícias</a>
+          <a class="btn_mais_noticias" href="{{ path('infocorp_affemat_noticias') }}">Mais notícias</a>
           <div class="tab-pane active" id="tab1">
             {{ render(url('infocorp_affemat_noticias_list_home')) }}
           </div>
