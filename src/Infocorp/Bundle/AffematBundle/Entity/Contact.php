@@ -69,6 +69,30 @@ class Contact
     }
 
     /**
+     * Sets the contact group
+     * 
+     * @param ContactGroup $contactGroup
+     * 
+     * @return Contact
+     */
+    public function setContactGroup(ContactGroup $contactGroup)
+    {
+        $this->contactGroup = $contactGroup;
+
+        return $this;
+    }
+
+    /**
+     * Gets the contact group
+     * 
+     * @return ContactGroup $contactGroup
+     */
+    public function getContactGroup()
+    {
+        return $this->contactGroup;
+    }
+
+    /**
      * Set title
      *
      * @param string $title

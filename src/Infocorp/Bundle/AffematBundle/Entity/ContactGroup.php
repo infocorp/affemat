@@ -23,6 +23,13 @@ class ContactGroup
     private $id;
 
     /**
+     * @var string
+     * 
+     * @ORM\Column(name="name", type="string", length=255)
+     */
+    private $name;
+
+    /**
      * @var ArrayCollection
      *
      * @ORM\OneToMany(targetEntity="Contact", mappedBy="contactGroup")
@@ -49,6 +56,30 @@ class ContactGroup
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Sets the name
+     * 
+     * @param string name 
+     * 
+     * @return ContactGroup
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets the name
+     * 
+     * @return string name
+     */
+    public function getName()
+    {
+        return $this->name;
     }
 
     /**
@@ -95,5 +126,10 @@ class ContactGroup
     public function getEnabled()
     {
         return $this->enabled;
+    }
+
+    public function __toString()
+    {
+        return $this->getName();
     }
 }
