@@ -25,3 +25,9 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: Contato, label: Contatos }
         arguments: [null, Infocorp\Bundle\AffematBundle\Entity\Contact, null]
+
+    sonata.admin.event:
+        class: Infocorp\Bundle\AffematBundle\Admin\EventAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Eventos, label: Eventos }
+        arguments: [null, Infocorp\Bundle\AffematBundle\Entity\Event, null]
