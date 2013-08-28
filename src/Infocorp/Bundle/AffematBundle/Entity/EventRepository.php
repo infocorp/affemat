@@ -12,4 +12,29 @@ use Doctrine\ORM\EntityRepository;
  */
 class EventRepository extends EntityRepository
 {
+    public function findEvents()
+    {
+        $query = $this->getEntityManager()->createQuery('
+            SELECT e
+            FROM Infocorp\Bundle\AffematBundle\Entity\Event e
+            WHERE e.enabled = 1
+            AND e.publicationStartsAt >= CURRENT_TIMESTAMP()
+            ORDER BY e.publicationStartsAt DESC
+        ');
+
+        return $query->getResult();
+    }
+
+    public function findEventBySlug($slug)
+    {
+        $query = $this->getEntityManager()->createQuery('
+            SELECT e
+            FROM Infocorp\Bundle\AffematBundle\Entity\Event e
+            WHERE e.enabled = 1
+            AND e.publicationStartsAt >= CURRENT_TIMESTAMP()
+            AND e.slug = :slug
+        ')->setParameter('slug', $slug);
+
+        return $query->getResult();
+    }
 }

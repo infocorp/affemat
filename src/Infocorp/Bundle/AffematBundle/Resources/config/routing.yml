@@ -41,3 +41,11 @@ infocorp_affemat_galeria:
 infocorp_affemat_galeria_view:
     pattern: /galerias/{id}
     defaults: { _controller: InfocorpAffematBundle:Gallery:view }
+
+infocorp_affemat_event_list:
+    pattern: /eventos
+    defaults: { _controller: InfocorpAffematBundle:Event:list }
+
+infocorp_affemat_event_view:
+    pattern: /eventos/{slug}
+    defaults: { _controller: InfocorpAffematBundle:Event:view }
