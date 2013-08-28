@@ -349,6 +349,12 @@ header .menu_sup a:hover{
 	text-align: justify;
 }
 
+/*######################  PAGE INSTITUTIONALS ######################*/
+.content-institutional{
+	margin: auto 10% auto 0;
+	text-align: justify;
+}
+
 /*###################### FOOTER ######################*/
 
 #rodape{

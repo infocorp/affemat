@@ -35,6 +35,9 @@ class InstitutionalController extends Controller
             throw new NotFoundHttpException('Item institucional não encontrado');
         }
 
-        return $this->render('InfocorpAffematBundle:Institutional:view.html.twig');
+        return $this->render('InfocorpAffematBundle:Institutional:view.html.twig', array(
+                'institutionals' => $institutionals,
+                'institutional' => $institutionalContent,
+            ));
     }
 }
