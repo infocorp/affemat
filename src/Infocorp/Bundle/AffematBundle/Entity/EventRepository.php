@@ -18,7 +18,7 @@ class EventRepository extends EntityRepository
             SELECT e
             FROM Infocorp\Bundle\AffematBundle\Entity\Event e
             WHERE e.enabled = 1
-            AND e.publicationStartsAt >= CURRENT_TIMESTAMP()
+            AND e.publicationStartsAt <= CURRENT_TIMESTAMP()
             ORDER BY e.publicationStartsAt DESC
         ');
 
@@ -31,10 +31,15 @@ class EventRepository extends EntityRepository
             SELECT e
             FROM Infocorp\Bundle\AffematBundle\Entity\Event e
             WHERE e.enabled = 1
-            AND e.publicationStartsAt >= CURRENT_TIMESTAMP()
+            AND e.publicationStartsAt <= CURRENT_TIMESTAMP()
             AND e.slug = :slug
-        ')->setParameter('slug', $slug);
+        ');
 
-        return $query->getResult();
+        $query
+            ->setParameter('slug', $slug)
+            ->setMaxResults(1)
+        ;
+
+        return $query->getSingleResult();
     }
 }

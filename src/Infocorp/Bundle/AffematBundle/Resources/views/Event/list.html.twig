@@ -1,0 +1,19 @@
+{% extends 'InfocorpAffematBundle::layout.html.twig' %}
+
+{% block content %}
+  <ul class="breadcrumb">
+    <li><a href="{{ path('infocorp_affemat_homepage') }}">Home</a><span class="divider">/</span></li>
+    <li class="active">Eventos</li>
+  </ul>
+
+  <div class="row-fluid">
+    <h1>Eventos</h1>
+
+    <ul class="events-list">
+      {% for event in events %}
+        <li><a href="{{ path('infocorp_affemat_event_view', {slug: event.slug}) }}">{{ event.title }}</a></li>
+      {% endfor %}  
+    </ul>
+
+  </div>
+{% endblock %}

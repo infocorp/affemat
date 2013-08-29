@@ -1,0 +1,20 @@
+{% extends 'InfocorpAffematBundle::layout.html.twig' %}
+
+{% block content %}
+  <ul class="breadcrumb">
+    <li><a href="{{ path('infocorp_affemat_homepage') }}">Home</a><span class="divider">/</span></li>
+    <li><a href="{{ path('infocorp_affemat_event_list') }}">Eventos</a><span class="divider">/</span></li>
+    <li class="active">{{ event.title }}</li>
+  </ul>
+  
+  <div class="row-fluid">
+    <div class="span6">
+      <h1>{{ event.title }}</h1>
+      Publicado em: <span>{{ event.publicationStartsAt|date('d/m/Y  h:i:s') }}</span>
+
+      <p>{{ event.abstract }}</p>
+      <p>{{ event.content|raw }}</p>
+    </div>
+  </div>
+
+{% endblock %}
