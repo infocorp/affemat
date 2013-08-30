@@ -31,3 +31,9 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: Eventos, label: Eventos }
         arguments: [null, Infocorp\Bundle\AffematBundle\Entity\Event, null]
+
+    sonata.admin.category:
+        class: Application\Sonata\MediaBundle\Admin\CategoryAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: sonata_media, label: Categoria }
+        arguments: [null, Application\Sonata\MediaBundle\Entity\Category, null]
