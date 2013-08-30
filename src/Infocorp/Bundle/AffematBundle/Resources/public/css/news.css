@@ -1,0 +1,15 @@
+.news-wrap {
+    overflow: hidden;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.news-wrap .news-image {
+    float: left;
+    margin-right: 10px;
+}
+
+.news-text {
+    float: left;
+    width: 80%;
+}

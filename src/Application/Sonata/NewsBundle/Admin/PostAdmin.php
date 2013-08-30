@@ -75,7 +75,10 @@ class PostAdmin extends Admin
                     'target_field'   => 'content',
                     'listener'       => true,
                 ))
-                ->add('image', 'sonata_type_model_list', array('label' => 'Imagem de capa'))
+                ->add('image', 'sonata_type_model_list', array(
+                	'label' => 'Imagem de capa',
+                	'required' => false,
+            	))
             ->end()
             ->with('Tags')
                 ->add('tags', 'sonata_type_model', array(
