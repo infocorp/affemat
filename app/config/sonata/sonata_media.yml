@@ -1,6 +1,9 @@
 #
 # more information can be found here http://sonata-project.org/bundles/media
 #
+parameters:
+    sonata.media.admin.gallery.class: Application\Sonata\MediaBundle\Admin\GalleryAdmin
+
 sonata_media:
     db_driver:       doctrine_orm # | doctrine_mongodb
     default_context: default
@@ -16,8 +19,9 @@ sonata_media:
                 - sonata.media.provider.vimeo
 
             formats:
-                small: { width: 100, quality: 100}
+                small: { width: 150, quality: 90}
                 big:   { width: 820 , quality: 100}
+                medium: { width: 500, quality: 100 }
 
         news:
             providers:

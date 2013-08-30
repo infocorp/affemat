@@ -58,4 +58,16 @@ class NewsController extends Controller
         	'news' => $news,
     	));
     }
+
+    public function homeListAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $newsManager = $em->getRepository('ApplicationSonataNewsBundle:Post');
+
+        $news = $newsManager->findLastNews();
+
+        return $this->render('InfocorpAffematBundle:News:home_list.html.twig', array(
+            'news' => $news,
+        ));
+    }
 }

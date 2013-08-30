@@ -40,7 +40,7 @@
             <h1> Associação dos Funcionários da Fazenda do Estado de Mato Grosso</h1>
           </div>
           <div class="logo">
-            <a href="#" title="AFFEMAT" alt="AFFEMAT"><img src="{{ asset('bundles/infocorpaffemat/images/logo.png') }}" title="AFFEMAT" alt="AFFEMAT"></a>
+            <a href="{{ path('infocorp_affemat_homepage') }}" title="AFFEMAT" alt="AFFEMAT"><img src="{{ asset('bundles/infocorpaffemat/images/logo.png') }}" title="AFFEMAT" alt="AFFEMAT"></a>
           </div>
         </div>
         <div class="menu_sup">
@@ -60,15 +60,15 @@
     {% block content %}
     {% endblock %}
     </div>
-    
-    {% block media_social %}
-      <div id="media_social">
-        <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FAffemat%2F201137789921676&amp;width=900&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=true&amp;appId=289289821083335" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:900px; height:258px;" allowTransparency="true"></iframe>
-      </div>
-    {% endblock %}
 
     {% block rodape %}
-      <div id="rodape">rodape</div>
+      <div id="rodape">
+        {% block media_social %}
+          <div id="media_social">
+            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FAffemat%2F201137789921676&amp;width=900&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=true&amp;appId=289289821083335" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:900px; height:258px;" allowTransparency="true"></iframe>
+          </div>
+        {% endblock %}
+      </div>
     {% endblock %}
 </body>
 </html>

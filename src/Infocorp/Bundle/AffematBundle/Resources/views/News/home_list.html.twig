@@ -1,0 +1,22 @@
+<ul class="nav_tab_right">
+  {% for item in news %}
+    {% if loop.first %}
+      <li>
+        <a href="{{ path('infocorp_affemat_noticia', {slug: item.slug}) }}">
+          {% if item.image %}
+            {% media item.image, 'reference' with {height: 100, width: 130} %}
+          {% endif %}
+          <strong>{{ item.title }}</strong>
+        </a>
+        <p>{{ item.abstract }}</p>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+<ul class="nav_tab_left">
+  {% for item in news %}
+    {% if not loop.first %}
+      <li><a href="{{ path('infocorp_affemat_noticia', {slug: item.slug}) }}">{{ item.title|slice(0, 60) }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>

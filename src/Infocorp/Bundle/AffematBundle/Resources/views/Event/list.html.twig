@@ -1,0 +1,27 @@
+{% extends 'InfocorpAffematBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  {% stylesheets 'bundles/infocorpaffemat/css/event.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}">
+  {% endstylesheets %}
+{% endblock %}
+
+{% block content %}
+  <ul class="breadcrumb">
+    <li><a href="{{ path('infocorp_affemat_homepage') }}">Home</a><span class="divider">/</span></li>
+    <li class="active">Eventos</li>
+  </ul>
+
+  <div class="row-fluid">
+    <div class="event-wrap span6">
+      <h1>Eventos</h1>
+
+      <ul class="event-list">
+        {% for event in events %}
+          <li><a href="{{ path('infocorp_affemat_event_view', {slug: event.slug}) }}">{{ event.title }}</a></li>
+        {% endfor %}  
+      </ul>
+    </div>
+  </div>
+{% endblock %}

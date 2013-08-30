@@ -13,3 +13,27 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: Site, label: Institucional }
         arguments: [null, Infocorp\Bundle\AffematBundle\Entity\Institutional, null]
+
+    sonata.admin.contact.group:
+        class: Infocorp\Bundle\AffematBundle\Admin\ContactGroupAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Contato, label: Grupos }
+        arguments: [null, Infocorp\Bundle\AffematBundle\Entity\ContactGroup, null]
+
+    sonata.admin.contact:
+        class: Infocorp\Bundle\AffematBundle\Admin\ContactAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Contato, label: Contatos }
+        arguments: [null, Infocorp\Bundle\AffematBundle\Entity\Contact, null]
+
+    sonata.admin.event:
+        class: Infocorp\Bundle\AffematBundle\Admin\EventAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Eventos, label: Eventos }
+        arguments: [null, Infocorp\Bundle\AffematBundle\Entity\Event, null]
+
+    sonata.admin.category:
+        class: Application\Sonata\MediaBundle\Admin\CategoryAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: sonata_media, label: Categoria }
+        arguments: [null, Application\Sonata\MediaBundle\Entity\Category, null]

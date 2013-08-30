@@ -17,34 +17,51 @@
     {% endfor %}
   {% endif %}
 
-  <h3>Fale conosco</h3>
+  <h1>Fale conosco</h1>
 
-  <div class="row-fluid">
-    <div class="well">
-      <form action="{{ path('infocorp_affemat_fale_conosco') }}" method="POST" class="form-horizontal">
-        <div class="control-group">
-          <label class="control-label">Nome</label>
-          <div class="controls">
-            <input type="text" name="name" required>
-          </div>
+  {# Formulário de contato #}
+  <div class="span8">
+    <form action="{{ path('infocorp_affemat_fale_conosco') }}" method="POST" class="form-horizontal">
+      <div class="control-group">
+        <label class="control-label">Nome</label>
+        <div class="controls">
+          <input type="text" name="name" required>
         </div>
-        <div class="control-group">
-          <label class="control-label">Email</label>
-          <div class="controls">
-            <input type="email" name="email" required>
-          </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label">Email</label>
+        <div class="controls">
+          <input type="email" name="email" required>
         </div>
-        <div class="control-group">
-          <label class="control-label">Deixe seu recado</label>
-          <div class="controls">
-            <textarea name="message" cols="20" rows="10"></textarea>
-          </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label">Deixe seu recado</label>
+        <div class="controls">
+          <textarea name="message" cols="20" rows="10"></textarea>
         </div>
+      </div>
 
-        <div class="form-actions">
-          <input type="submit" value="Enviar!" class="btn btn-primary">
-        </div>
-      </form>
-    </div>
+      <div class="form-actions">
+        <input type="submit" value="Enviar!" class="btn btn-primary">
+      </div>
+    </form>
+  </div>
+
+  {# Informações de contato da affemat #}
+  <div class="span3">
+    <h2>Contatos da affemat</h2>
+    {% for group in groups %}
+      <h3>{{ group.name }}</h3>
+        {% for contact in group.contacts %}
+          <h4>{{ contact.title }}</h4>
+          <span><em>Telefone: </em>{{ contact.phone }}</span><br/>
+          {% if contact.email %}
+            <span><em>Email: </em>{{ contact.email }}</span><br/>
+          {% endif %}
+          {% if contact.address %}
+            <span><em>Endereço: </em>{{ contact.address }}</span><br/>
+          {% endif %}
+        {% endfor %}
+    {% endfor %}
   </div>
 {% endblock %}

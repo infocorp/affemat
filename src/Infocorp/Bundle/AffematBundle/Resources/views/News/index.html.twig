@@ -1,5 +1,12 @@
 {% extends 'InfocorpAffematBundle::layout.html.twig' %}
 
+{% block stylesheets %}
+  {{ parent() }}
+  {% stylesheets 'bundles/infocorpaffemat/css/news.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}">
+  {% endstylesheets %}
+{% endblock %}
+
 {% block content %}
   <ul class="breadcrumb">
     <li><a href="{{ path('infocorp_affemat_homepage') }}">Home</a><span class="divider">/</span></li>
@@ -28,8 +35,8 @@
     <div class="span10">
       {% for item in news %}
         <div class="news-wrap">
-          <a href="{{ path('infocorp_affemat_noticia', { 'slug': item.slug }) }}">
-            {% media item.image, 'reference' %}
+          <a class="news-image" href="{{ path('infocorp_affemat_noticia', { 'slug': item.slug }) }}">
+            {% thumbnail item.image, 'small' %}
           </a>
           <div class="news-text">
             <a href="{{ path('infocorp_affemat_noticia', { 'slug': item.slug }) }}">

@@ -1,0 +1,16 @@
+.event-wrap {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 50px;
+    float: none !important;
+    padding: 10px;
+}
+
+.publication-date {
+    margin: 0 0 10px 0;
+}
+
+.event-list {
+    list-style: none;
+    margin-left: 0 !important;
+}

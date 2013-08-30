@@ -13,26 +13,9 @@
           <li><a href="#tab3" data-toggle="tab">Galerias</a></li>
         </ul>
         <div class="tab-content">
-          <a class="btn_mais_noticias" href="#">Mais notícias</a>
+          <a class="btn_mais_noticias" href="{{ path('infocorp_affemat_noticias') }}">Mais notícias</a>
           <div class="tab-pane active" id="tab1">
-            <ul class="nav_tab_right">
-              <li>
-                <a href="http://affemat.gopagoda.com/noticias/mais-mdicos-reabre-inscries-para-segunda-chamada"><img src="/bundles/infocorpaffemat/images/medicos.jpg">
-                <strong>Mais médicos reabre inscrições para segunda chamada</strong>
-                </a>
-                <p>Reabrem, nesta segunda-feira (19), as inscrições para o programa Mais Médicos...</p>
-              </li>
-            </ul>
-            <ul class="nav_tab_left">
-              <li><a title="AFFEMAT | Notícias" href="http://affemat.gopagoda.com/noticias/mais-mdicos-reabre-inscries-para-segunda-chamada">Mais Médicos reabre inscrições para segunda chamada...</a></li>
-              <li><a title="AFFEMAT | Notícias" href="http://affemat.gopagoda.com/noticias/avenidas-de-cuiab-tero-converso--esquerda-proibida">Avenidas de Cuiabá terão conversão à esquerda proibida...</a></li>
-              <li><a title="AFFEMAT | Notícias" href="http://affemat.gopagoda.com/noticias/comisso-pede-adequao-ao-deputado-romoaldo-jnior">Comissão pede adequação ao deputado Romoaldo Júnior</a></li>
-              <li><a title="AFFEMAT | Notícias" href="http://affemat.gopagoda.com/noticias/mauro-empossa-novo-secretrio-e-sai-em-defesa-de-estilo">Mauro empossa novo secretário e sai em defesa de estilo</a></li>
-              <li><a title="AFFEMAT | Notícias" href="http://affemat.gopagoda.com/noticias/lutar-pelo-meio-ambiente-no--prioridade-dos-jovens-brasileiros-diz-pesquisa">Lutar pelo meio ambiente não é prioridade dos jovens</a></li>
-              <li><a title="AFFEMAT | Notícias" href="http://affemat.gopagoda.com/noticias/ii-encontro-da-famlia-fiscal-comea-nesta-quinta-feira">II Encontro da Família Fiscal começa nesta quinta-feira
-</a></li>
-              <li><a title="AFFEMAT | Notícias" href="http://affemat.gopagoda.com/noticias/alemanha-reconhece-terceiro-gnero-sexual-no-registro-de-bebs">Alemanha reconhece terceiro gênero sexual</a></li>
-            </ul>
+            {{ render(url('infocorp_affemat_noticias_list_home')) }}
           </div>
           <div class="tab-pane" id="tab2">
             <p>Aqui será exibido notícias sobre aposentados e pensionistas</p>
@@ -133,32 +116,24 @@
   <div id="servicos">
     <ul class="nav_serv">
       <li class="nav_serv_principal">
-        <!-- <ul class="nav_institucional">
-            <li class="servicos_inst"><strong>Institucional</strong></li>
-            <li><a title="AFFEMAT | Quem somos" href="#">Quem somos</a></li>
-            <li><a title="AFFEMAT | Valores" href="#">Valores</a></li>
-            <li><a title="AFFEMAT | História" href="#">História</a></li>
-            <li><a title="AFFEMAT | Estatuto Social" href="#">Estatuto Social</a></li>
-            <li><a title="AFFEMAT | Regimento" href="#">Regimento Interno</a></li>
-            <li><a title="AFFEMAT | Ação Social" href="#">Ação Social</a></li>
-            <li><a title="AFFEMAT | Prestação de Contas" href="#">Prestação</a></li>
-        </ul> -->
+        
+        {# Renderiza itens do menu institucional #}
         {{ render(url('infocorp_affemat_institutional_list')) }}
 
         <ul class="nav_comunicacao">
             <li class="servicos_com"><strong>Comunicação</strong></li>
-            <li><a title="AFFEMAT | Quem somos" href="{{ path('infocorp_affemat_noticias') }}">Notícias</a></li>
-            <li><a title="AFFEMAT | História" href="#">Galerias</a></li>
-            <li><a title="AFFEMAT | Estatuto Social" href="#">Eventos</a></li>
-            <li><a title="AFFEMAT | Regimento" href="#">Publicações</a></li>
+            <li><a href="{{ path('infocorp_affemat_noticias') }}">Notícias</a></li>
+            <li><a  href="{{ path('infocorp_affemat_galeria') }}">Galerias</a></li>
+            <li><a  href="{{ path('infocorp_affemat_event_list') }}">Eventos</a></li>
+            <li><a  href="#">Publicações</a></li>
         </ul>
 
         <ul class="nav_servicos">
             <li class="servicos_serv"><strong>Serviços</strong></li>
-            <li><a title="AFFEMAT | Quem somos" href="#">Convênios</a></li>
-            <li><a title="AFFEMAT | Valores" href="#">Filiação</a></li>
-            <li><a title="AFFEMAT | História" href="#">Intranet</a></li>
-            <li><a title="AFFEMAT | Estatuto Social" href="#">Classificados</a></li>
+            <li><a  href="#">Convênios</a></li>
+            <li><a  href="#">Filiação</a></li>
+            <li><a  href="#">Intranet</a></li>
+            <li><a  href="#">Classificados</a></li>
         </ul>
       </li>
     </ul>

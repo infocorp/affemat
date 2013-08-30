@@ -17,5 +17,7 @@
             <generator strategy="AUTO"/>
         </id>
 
+        <many-to-one field="category" target-entity="Application\Sonata\MediaBundle\Entity\Category" inversed-by="galleries" />
+
     </entity>
 </doctrine-mapping>

@@ -29,6 +29,11 @@ class Gallery extends BaseGallery
     protected $id;
 
     /**
+     * @var Category
+     */
+    protected $category;
+
+    /**
      * Get id
      *
      * @return integer $id
@@ -36,5 +41,29 @@ class Gallery extends BaseGallery
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Sets the category
+     * 
+     * @param Category
+     * 
+     * @return Gallery
+     */
+    public function setCategory(Category $category)
+    {
+    	$this->category = $category;
+
+    	return $this;
+    }
+
+    /**
+     * Gets the category
+     * 
+     * @return Category
+     */
+    public function getCategory()
+    {
+    	return $this->category;
     }
 }

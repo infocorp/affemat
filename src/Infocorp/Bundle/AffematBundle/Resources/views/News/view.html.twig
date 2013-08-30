@@ -1,13 +1,25 @@
 {% extends 'InfocorpAffematBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  {% stylesheets 'bundles/infocorpaffemat/css/news.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}">
+  {% endstylesheets %}
+{% endblock %}
+
 {% block content %}
+  <ul class="breadcrumb">
+    <li><a href="{{ path('infocorp_affemat_homepage') }}">Home</a><span class="divider">/</span></li>
+    <li><a href="{{ path('infocorp_affemat_noticias') }}">Notícias</a><span class="divider">/</span></li>
+    <li class="active">{{ news.title }}</li>
+  </ul>
 
-	<article>
-	    <h1 class="title-new">
-	    	{{ news.title }}
-	    </h1>
+  <article class="news-container">
+    <h1 class="news-title">{{ news.title }}</h1>
+    <span class="news-publication"><em>Publicado em:</em> {{ news.publicationDateStart|date('d/m/Y') }}</span>
 
-	    <div class="content-new">
-	    	{{ news.content | raw }}
-		</div>	    
-    </article>
+    {% thumbnail news.image, 'medium' with {class: 'news-view-image'} %}
+
+    {{ news.content | raw }}
+  </article>
 {% endblock %}
