@@ -1,5 +1,12 @@
 {% extends 'InfocorpAffematBundle::layout.html.twig' %}
 
+{% block stylesheets %}
+    {{ parent() }}
+  {% stylesheets 'bundles/infocorpaffemat/css/event.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}">
+  {% endstylesheets %}
+{% endblock %}
+
 {% block content %}
   <ul class="breadcrumb">
     <li><a href="{{ path('infocorp_affemat_homepage') }}">Home</a><span class="divider">/</span></li>
@@ -8,12 +15,16 @@
   </ul>
   
   <div class="row-fluid">
-    <div class="span6">
-      <h1>{{ event.title }}</h1>
-      Publicado em: <span>{{ event.publicationStartsAt|date('d/m/Y  h:i:s') }}</span>
+    <div class="event-wrap span6">
+      <article>
+        <h1>{{ event.title }}</h1>
+        <div class="publication-date">
+          Publicado em: <span>{{ event.publicationStartsAt|date('d/m/Y') }}</span>
+        </div>
 
-      <p>{{ event.abstract }}</p>
-      <p>{{ event.content|raw }}</p>
+        <p>{{ event.abstract }}</p>
+        <p>{{ event.content|raw }}</p>
+      </article>
     </div>
   </div>
 
